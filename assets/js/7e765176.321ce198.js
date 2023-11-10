@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeditfund_github_io=self.webpackChunkeditfund_github_io||[]).push([[103],{2654:e=>{e.exports=JSON.parse('{"label":"editfund","permalink":"/blog/tags/editfund","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

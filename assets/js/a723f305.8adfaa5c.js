@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeditfund_github_io=self.webpackChunkeditfund_github_io||[]).push([[2849],{8518:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/\u7406\u8d22\u8f6f\u4ef6","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
