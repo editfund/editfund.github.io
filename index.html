@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit.Fund</title>
-    <link href="https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.css" rel="stylesheet">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
-    <style>
-      .beercss-custom-article-p0 {
-        padding: 0px; /* 设置你想要的内边距 */
-      }
-      .beercss-custom-article-background-img1 {
-          width: 100%;
-          height: 500px; /* 你可以根据需要调整高度 */
-          background-image: url('img/ui-large/report-interpretation_1170x658.webp'); /* 替换为你的图片URL */
-          background-size: cover; /* 使背景图填满整个div */
-          background-position: center; /* 使背景图居中 */
-          background-repeat: no-repeat; /* 防止背景图重复 */
-      }
 
-    </style>
-    <style>
-      #app {
-/*
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit.Fund</title>
+  <link href="https://unpkg.com/beercss@3.6.13/dist/cdn/beer.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/beercss@3.6.13/dist/cdn/beer.min.js"></script>
+  <script type="module"
+    src="https://unpkg.com/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+  <style>
+    .beercss-custom-article-p0 {
+      padding: 0px;
+      /* 设置你想要的内边距 */
+    }
+
+    .beercss-custom-article-background-img1 {
+      width: 100%;
+      height: 500px;
+      /* 你可以根据需要调整高度 */
+      background-image: url('img/ui-large/report-interpretation_1170x658.webp');
+      /* 替换为你的图片URL */
+      background-size: cover;
+      /* 使背景图填满整个div */
+      background-position: center;
+      /* 使背景图居中 */
+      background-repeat: no-repeat;
+      /* 防止背景图重复 */
+    }
+  </style>
+  <style>
+    #app {
+      /*
         position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
 */
-        width: 100%;
-        height: 50vh; /* 高度自动调整以保持纵横比 */
-        background-color: gray;
+      width: 100%;
+      height: 50vh;
+      /* 高度自动调整以保持纵横比 */
+      background-color: gray;
 
-      }
-    </style>
+    }
+  </style>
 
 </head>
+
 <body>
   <header>
     <nav>
-       <a href="index.html">
-          <button class="circle transparent">
-            <img class="responsive" src="img/logo.png" />
-          </button>
+      <a href="index.html">
+        <button class="circle transparent">
+          <img class="responsive" src="img/logo.png" />
+        </button>
       </a>
       <h5 class="max">Edit.Fund</h5>
       <button class="circle transparent">
@@ -53,11 +63,11 @@
     </nav>
   </header>
   <main class="responsive">
-<!--
+    <!--
  * <article id="app" class="medium middle-align center-align"> 📌⚠️center-align会出现左右2列，气泡在左，CY在右
  * <article id="app" class="medium  middle-align">
  *  <article id="app" class="medium">
- -->
+-->
     <article id="app" class="medium  middle-align beercss-custom-article-p0 beercss-custom-article-background-img1">
     </article>
 
@@ -90,239 +100,239 @@
 
   </main>
 </body>
-  <script src="https://unpkg.com/cytoscape@3.31.2/dist/cytoscape.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-layers@2.4.3/build/index.umd.min.js"></script>
-  <script src="https://unpkg.com/cytoscape-bubblesets@3.2.0/build/index.umd.min.js"></script>
+<script src="https://unpkg.com/cytoscape@3.31.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/cytoscape-layers@2.4.3/build/index.umd.min.js"></script>
+<script src="https://unpkg.com/cytoscape-bubblesets@3.2.0/build/index.umd.min.js"></script>
 
-  <script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
-  <script src="https://unpkg.com/avsdf-base@1.0.0/avsdf-base.js"></script>
-  <script src="https://unpkg.com/cytoscape-avsdf@1.0.0/cytoscape-avsdf.js"></script>
-  <script>
-    const cy = cytoscape({
-      container: document.getElementById("app"), // container to render in
-      boxSelectionEnabled: false,
-      autounselectify: true,
+<script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
+<script src="https://unpkg.com/avsdf-base@1.0.0/avsdf-base.js"></script>
+<script src="https://unpkg.com/cytoscape-avsdf@1.0.0/cytoscape-avsdf.js"></script>
+<script>
+  const cy = cytoscape({
+    container: document.getElementById("app"), // container to render in
+    boxSelectionEnabled: false,
+    autounselectify: true,
 
-      layout: {
-        name: "avsdf",
-        nodeSeparation: 120,
+    layout: {
+      name: "avsdf",
+      nodeSeparation: 120,
+    },
+
+    style: [
+      {
+        selector: "node",
+        style: {
+          label: "data(label)",
+          'border-width': 1,
+          "text-valign": "bottom",
+          color: "#000000",
+          //"background-color": "#3a7ecf",
+          //background-image-opacity
+          //background-image-smoothing
+          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
+          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
+          //"background-image": "img/F26.webp",
+          "background-fit": "contain"
+        },
       },
 
-      style: [
+      {
+        selector: "#v3",
+        style: {
+          label: "data(label)",
+          'border-width': 1,
+          "text-valign": "bottom",
+          color: "#000000",
+          //"background-color": "#3a7ecf",
+          //background-image-opacity
+          //background-image-smoothing
+          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
+          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
+          "background-image": "img/logo-EF.svg",
+          "background-fit": "contain"
+        },
+      },
+
+      {
+        selector: "#v5",
+        style: {
+          label: "data(label)",
+          'border-width': 1,
+          "text-valign": "bottom",
+          color: "#000000",
+          //"background-color": "#3a7ecf",
+          //background-image-opacity
+          //background-image-smoothing
+          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
+          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
+          "background-image": "img/gitea.svg",
+          "background-fit": "contain"
+        },
+      },
+
+      {
+        selector: "#v6",
+        style: {
+          label: "data(label)",
+          'border-width': 1,
+          "text-valign": "bottom",
+          color: "#000000",
+          //"background-color": "#3a7ecf",
+          //background-image-opacity
+          //background-image-smoothing
+          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
+          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
+          "background-image": "img/gopher-golfer.svg",
+          "background-fit": "contain",
+        },
+      },
+
+      {
+        selector: "#v7",
+        style: {
+          label: "data(label)",
+          'border-width': 1,
+          "text-valign": "bottom",
+          color: "#000000",
+          //"background-color": "#3a7ecf",
+          //background-image-opacity
+          //background-image-smoothing
+          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
+          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
+          "background-image": "img/go-git.avif",
+          "background-fit": "contain",
+        },
+      },
+
+      {
+        selector: "edge",
+        style: {
+          width: 2,
+          "line-color": "#3a7ecf",
+          opacity: 0.5,
+        },
+      },
+    ],
+
+    elements: {
+      nodes: [
         {
-          selector: "node",
-          style: {
-            label: "data(label)",
-            'border-width': 1,
-            "text-valign": "bottom",
-            color: "#000000",
-            //"background-color": "#3a7ecf",
-            //background-image-opacity
-            //background-image-smoothing
-            //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-            //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-            //"background-image": "img/F26.webp",
-            "background-fit": "contain"
+          data: {
+            id: "v1",
+            label: "AI",
+            issues: "1",
+            weight: 1,
+            href: "ai.html",
           },
         },
-
         {
-          selector: "#v3",
-          style: {
-            label: "data(label)",
-            'border-width': 1,
-            "text-valign": "bottom",
-            color: "#000000",
-            //"background-color": "#3a7ecf",
-            //background-image-opacity
-            //background-image-smoothing
-            //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-            //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-            "background-image": "img/logo-EF.svg",
-            "background-fit": "contain"
+          data: {
+            id: "v2",
+            label: "API",
+            issues: "2",
+            weight: 2,
+            href: "api.html",
           },
         },
-
         {
-          selector: "#v5",
-          style: {
-            label: "data(label)",
-            'border-width': 1,
-            "text-valign": "bottom",
-            color: "#000000",
-            //"background-color": "#3a7ecf",
-            //background-image-opacity
-            //background-image-smoothing
-            //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-            //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-            "background-image": "img/gitea.svg",
-            "background-fit": "contain"
+          data: {
+            id: "v3",
+            label: "Hub",
+            issues: "3",
+            weight: 3,
+            href: "hub.html",
           },
         },
-
         {
-          selector: "#v6",
-          style: {
-            label: "data(label)",
-            'border-width': 1,
-            "text-valign": "bottom",
-            color: "#000000",
-            //"background-color": "#3a7ecf",
-            //background-image-opacity
-            //background-image-smoothing
-            //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-            //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-            "background-image": "img/gopher-golfer.svg",
-            "background-fit": "contain",
+          data: {
+            id: "v4",
+            label: "IME-AI",
+            issues: "4",
+            weight: 4,
+            href: "https://gitea.com/gitea/tea",
           },
         },
-
         {
-          selector: "#v7",
-          style: {
-            label: "data(label)",
-            'border-width': 1,
-            "text-valign": "bottom",
-            color: "#000000",
-            //"background-color": "#3a7ecf",
-            //background-image-opacity
-            //background-image-smoothing
-            //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-            //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-            "background-image": "img/go-git.avif",
-            "background-fit": "contain",
+          data: {
+            id: "v5",
+            label: "gitea",
+            issues: "5",
+            weight: 5,
+            href: "https://github.com/go-gitea/gitea",
           },
         },
-
         {
-          selector: "edge",
-          style: {
-            width: 2,
-            "line-color": "#3a7ecf",
-            opacity: 0.5,
+          data: {
+            id: "v6",
+            label: "Go",
+            issues: "6",
+            weight: 6,
+            href: "https://github.com/golang/go",
+          },
+        },
+        {
+          data: {
+            id: "v7",
+            label: "go-git",
+            issues: "7",
+            weight: 7,
+            href: "https://github.com/go-git",
           },
         },
       ],
-
-      elements: {
-        nodes: [
-          {
-            data: {
-              id: "v1",
-              label: "AI",
-              issues: "1",
-              weight: 1,
-              href: "ai.html",
-            },
-          },
-          {
-            data: {
-              id: "v2",
-              label: "API",
-              issues: "2",
-              weight: 2,
-              href: "api.html",
-            },
-          },
-          {
-            data: {
-              id: "v3",
-              label: "Hub",
-              issues: "3",
-              weight: 3,
-              href: "hub.html",
-            },
-          },
-          {
-            data: {
-              id: "v4",
-              label: "IME-AI",
-              issues: "4",
-              weight: 4,
-              href: "https://gitea.com/gitea/tea",
-            },
-          },
-          {
-            data: {
-              id: "v5",
-              label: "gitea",
-              issues: "5",
-              weight: 5,
-              href: "https://github.com/go-gitea/gitea",
-            },
-          },
-          {
-            data: {
-              id: "v6",
-              label: "Go",
-              issues: "6",
-              weight: 6,
-              href: "https://github.com/golang/go",
-            },
-          },
-          {
-            data: {
-              id: "v7",
-              label: "go-git",
-              issues: "7",
-              weight: 7,
-              href: "https://github.com/go-git",
-            },
-          },
-        ],
-        edges: [
-          { data: { source: "v1", target: "v2", directed: "false" } },
-          { data: { source: "v1", target: "v4", directed: "false" } },
-          { data: { source: "v1", target: "v5", directed: "false" } },
-          { data: { source: "v2", target: "v4", directed: "false" } },
-          { data: { source: "v2", target: "v6", directed: "false" } },
-          { data: { source: "v3", target: "v4", directed: "false" } },
-          { data: { source: "v4", target: "v5", directed: "false" } },
-          { data: { source: "v4", target: "v7", directed: "false" } },
-          { data: { source: "v5", target: "v6", directed: "false" } },
-          { data: { source: "v6", target: "v3", directed: "false" } },
-        ],
+      edges: [
+        { data: { source: "v1", target: "v2", directed: "false" } },
+        { data: { source: "v1", target: "v4", directed: "false" } },
+        { data: { source: "v1", target: "v5", directed: "false" } },
+        { data: { source: "v2", target: "v4", directed: "false" } },
+        { data: { source: "v2", target: "v6", directed: "false" } },
+        { data: { source: "v3", target: "v4", directed: "false" } },
+        { data: { source: "v4", target: "v5", directed: "false" } },
+        { data: { source: "v4", target: "v7", directed: "false" } },
+        { data: { source: "v5", target: "v6", directed: "false" } },
+        { data: { source: "v6", target: "v3", directed: "false" } },
+      ],
+    },
+  });
+  cy.ready(() => {
+    const bb = cy.bubbleSets();
+    const edges = cy.edges().slice(0, 4);
+    console.log(cy.edges());
+    const nodes = edges.connectedNodes();
+    bb.addPath(nodes, edges, cy.nodes().diff(nodes).left, {
+      drawPotentialArea: true,
+      style: {
+        fill: "rgba(255, 0, 0, 0.2)",
+        stroke: "red",
       },
     });
-    cy.ready(() => {
-      const bb = cy.bubbleSets();
-      const edges = cy.edges().slice(0, 4);
-      console.log(cy.edges());
-      const nodes = edges.connectedNodes();
-      bb.addPath(nodes, edges, cy.nodes().diff(nodes).left, {
-        drawPotentialArea: true,
-        style: {
-          fill: "rgba(255, 0, 0, 0.2)",
-          stroke: "red",
-        },
-      });
 
-      const bb2 = cy.bubbleSets();
-      const edges2 = cy.$("node#v7").connectedEdges();
-      console.log(cy.edges());
-      const nodes2 = edges2.connectedNodes();
-      bb.addPath(nodes2, edges2, cy.nodes().diff(nodes).left, {
-        drawPotentialArea: true,
-        style: {
-          fill: "rgba(255, 255, 0, 0.2)",
-          stroke: "red",
-        },
-      });
+    const bb2 = cy.bubbleSets();
+    const edges2 = cy.$("node#v7").connectedEdges();
+    console.log(cy.edges());
+    const nodes2 = edges2.connectedNodes();
+    bb.addPath(nodes2, edges2, cy.nodes().diff(nodes).left, {
+      drawPotentialArea: true,
+      style: {
+        fill: "rgba(255, 255, 0, 0.2)",
+        stroke: "red",
+      },
     });
-    cy.on("tap", "node", async function (evt) {
-      var node = evt.target;
-      console.log("tapped " + node.id());
-      console.log("tapped " + node.data("issues"));
-      
-      try {
-        // your browser may block popups
-        window.open(this.data("href"));
-        //window.open(this.data("href") + node.data("issues"));
-      } catch (e) {
-        // fall back on url change
-        window.location.href = this.data("href");
-      }
-    });
-  </script>
+  });
+  cy.on("tap", "node", async function (evt) {
+    var node = evt.target;
+    console.log("tapped " + node.id());
+    console.log("tapped " + node.data("issues"));
+
+    try {
+      // your browser may block popups
+      window.open(this.data("href"));
+      //window.open(this.data("href") + node.data("issues"));
+    } catch (e) {
+      // fall back on url change
+      window.location.href = this.data("href");
+    }
+  });
+</script>
 
 </html>
