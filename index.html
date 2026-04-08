@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit.Fund</title>
-  <link href="https://unpkg.com/beercss@3.11.24/dist/cdn/beer.min.css" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/beercss@3.11.24/dist/cdn/beer.min.js"></script>
+  <link href="https://unpkg.com/beercss@4.0.20/dist/cdn/beer.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/beercss@4.0.20/dist/cdn/beer.min.js"></script>
   <script type="module"
-    src="https://unpkg.com/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    src="https://unpkg.com/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
   <style>
     .beercss-custom-article-p0 {
       padding: 0px;
@@ -28,6 +28,18 @@
       background-repeat: no-repeat;
       /* 防止背景图重复 */
     }
+      .beercss-custom-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .beercss-custom-center img.responsive {
+        width: 128px;
+        height: 128px;
+        object-fit: contain;
+      }
   </style>
   <style>
     #app {
@@ -49,25 +61,12 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <button class="circle transparent">
-          <img class="responsive" src="img/logo.png" />
-        </button>
-      </a>
-      <h5 class="max">Edit.Fund</h5>
-      <button class="circle transparent">
-        <i>more_vert</i>
-      </button>
-    </nav>
-  </header>
   <main class="responsive">
-    <!--
- * <article id="app" class="medium middle-align center-align"> 📌⚠️center-align会出现左右2列，气泡在左，CY在右
- * <article id="app" class="medium  middle-align">
- *  <article id="app" class="medium">
--->
+    <article class="white-text left-shadow beercss-custom-center">
+      <img class="responsive" src="img/logo2.svg" />
+      <h5 class="max">Edit.Fund</h5>
+    </article>
+
     <article id="app" class="medium  middle-align beercss-custom-article-p0 beercss-custom-article-background-img1">
     </article>
 
@@ -77,59 +76,28 @@
       <p>⭐生成财经图表</p>
       <p>⭐生成财经软件</p>
       <nav class="right-align">
-        <a href="ai.html"> <button>进入</button></a>
+        <a href="https://github.com/editfund/ai"> <button>进入</button></a>
 
-      </nav>
-    </article>
-    <article class="white-text left-shadow">
-      <h5>API</h5>
-      <p>⭐返回股票数据</p>
-      <p>⭐返回期货数据</p>
-      <p>⭐返回其他数据</p>
-      <nav class="right-align">
-        <a href="api.html"> <button>进入</button></a>
-      </nav>
-    </article>
-    <article class="white-text left-shadow">
-      <h5>Camp</h5>
-      <p>⭐开源的财经软件、文档开发社区</p>
-      <nav class="right-align">
-        <a href="camp.html"> <button>进入</button></a>
       </nav>
     </article>
 
     <article class="white-text left-shadow">
-      <a href="https://edit.fund/games.html">
-        <h5>Games</h5>
-      </a>
-      <p>⭐财经人的奥林匹克</p>
+      <h5>EF</h5>
+      <p>⭐一款基于Git与Gitea的私密理财信息管理软件</p>
       <nav class="right-align">
-        <a href="https://edit.fund/games.html"> <button>进入</button></a>
+        <a href="https://github.com/editfund/ef"> <button>进入</button></a>
+
       </nav>
-    </article>
- 
+    </article>    
+
     <article class="white-text left-shadow">
-      <a href="https://app.edit.fund/">
-        <h5>https://app.edit.fund</h5>
-      </a>
+      <a href="https://app.edit.fund/"><h5>https://app.edit.fund</h5></a>
       <p>⭐相关应用</p>
       <nav class="right-align">
         <a href="https://app.edit.fund/"> <button>进入</button></a>
       </nav>
     </article>
-
-    <article class="responsive middle-align center-align">
-      <div>
-        <img src="img-private/mmqrcode1750906988606.avif" width="500" height="600" />
-        <h5>联系微信号:editfund</h5>
-      </div>
-    </article>
-
   </main>
-
-  <footer>
-
-  </footer>
 </body>
 <script src="https://unpkg.com/cytoscape@3.31.2/dist/cytoscape.min.js"></script>
 <script src="https://unpkg.com/cytoscape-layers@2.4.3/build/index.umd.min.js"></script>
