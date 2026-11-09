@@ -1,257 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit.Fund</title>
-  <link href="https://unpkg.com/beercss@4.0.20/dist/cdn/beer.min.css" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/beercss@4.0.20/dist/cdn/beer.min.js"></script>
-  <script type="module"
-    src="https://unpkg.com/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
-  <style>
-    .beercss-custom-article-p0 {
-      padding: 0px;
-      /* 设置你想要的内边距 */
-    }
-
-    .beercss-custom-article-background-img1 {
-      width: 100%;
-      height: 500px;
-      /* 你可以根据需要调整高度 */
-      background-image: url('img/ui-large/report-interpretation_1170x658.webp');
-      /* 替换为你的图片URL */
-      background-size: cover;
-      /* 使背景图填满整个div */
-      background-position: center;
-      /* 使背景图居中 */
-      background-repeat: no-repeat;
-      /* 防止背景图重复 */
-    }
-      .beercss-custom-center {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit.fund is for sale!</title>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.10.8/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+      }
+      
+      .centered-div {
+        width: 400px;
+        height: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        padding: 20px;
       }
-      .beercss-custom-center img.responsive {
-        width: 128px;
-        height: 128px;
-        object-fit: contain;
-      }
-  </style>
-  <style>
-    #app {
-      /*
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-*/
-      width: 100%;
-      height: 50vh;
-      /* 高度自动调整以保持纵横比 */
-      background-color: gray;
-
-    }
-  </style>
-
+    </style>
 </head>
-
 <body>
-  <main class="responsive">
-    <article class="white-text left-shadow beercss-custom-center">
-      <img class="responsive" src="img/logo.avif" />
-      <h5 class="max">Edit.Fund</h5>
-    </article>
+    <div class="container centered-div">
+        <article class="medium middle-align center-align">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"  width="64" height="64"><path d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3L352 448l160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288l144.9 0L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320l144.9 0L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/></svg>
+            <h5>edit.fund is for sale!</h5>
+            <p>Asking price: US$500</p>
+            <p>founder@edit.fund</p>
+            <div class="space"></div>
 
-    <article class="white-text left-shadow">
-      <h5>EF</h5>
-      <p>⭐私密理财，基于Gitea多次革命性的改进</p>
-      <p>⭐私密理财，集成各种AI，生成财经文档、图表和软件</p>
-      <p><a href="https://app.edit.fund/">⭐相关应用，省心省力🔗</a></p>                 
-      <nav class="right-align">
-        <a href="https://github.com/editfund/ef"> <button>进入</button></a>
-      </nav>
-    </article>
-    
-    <article id="app" class="medium  middle-align beercss-custom-article-p0 beercss-custom-article-background-img1">
-    </article>    
-  </main>
+          </div>
+        </article>
+    </div>
 </body>
-<script src="https://unpkg.com/cytoscape@3.31.2/dist/cytoscape.min.js"></script>
-<script src="https://unpkg.com/cytoscape-layers@2.4.3/build/index.umd.min.js"></script>
-<script src="https://unpkg.com/cytoscape-bubblesets@3.2.0/build/index.umd.min.js"></script>
-
-<script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
-<script src="https://unpkg.com/avsdf-base@1.0.0/avsdf-base.js"></script>
-<script src="https://unpkg.com/cytoscape-avsdf@1.0.0/cytoscape-avsdf.js"></script>
-<script>
-  const cy = cytoscape({
-    container: document.getElementById("app"), // container to render in
-    boxSelectionEnabled: false,
-    autounselectify: true,
-
-    layout: {
-      name: "avsdf",
-      nodeSeparation: 120,
-    },
-
-    style: [
-      {
-        selector: "node",
-        style: {
-          label: "data(label)",
-          'border-width': 1,
-          "text-valign": "bottom",
-          color: "#000000",
-          //"background-color": "#3a7ecf",
-          //background-image-opacity
-          //background-image-smoothing
-          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-          //"background-image": "img/F26.webp",
-          "background-fit": "contain"
-        },
-      },
-
-      {
-        selector: "#node-5",
-        style: {
-          label: "data(label)",
-          'border-width': 1,
-          "text-valign": "bottom",
-          color: "#000000",
-          //"background-color": "#3a7ecf",
-          //background-image-opacity
-          //background-image-smoothing
-          //background-image-containment 📌Determines whether background image is within (inside, default) or over top of the node(over).
-          //background-fit 📌How the background image is fit to the node; may be none for original size, contain to fit inside node, or cover to cover the node.
-          "background-image": "img/logo.avif",
-          "background-fit": "contain"
-        },
-      },
-      {
-        selector: "edge",
-        style: {
-          width: 2,
-          "line-color": "#3a7ecf",
-          opacity: 0.5,
-        },
-      },
-    ],
-
-    elements: {
-      nodes: [
-        {
-          data: {
-            id: "node-1",
-            label: "AI",
-            issues: "1",
-            weight: 1,
-            href: "https://github.com/editfund/ai",
-          },
-        },
-        {
-          data: {
-            id: "node-2",
-            label: "EF",
-            issues: "2",
-            weight: 2,
-            href: "https://github.com/editfund/ef",
-          },
-        },
-        {
-          data: {
-            id: "node-3",
-            label: "Gitea",
-            issues: "3",
-            weight: 3,
-            href: "https://github.com/go-gitea/gitea",
-          },
-        },
-        {
-          data: {
-            id: "node-4",
-            label: "Gitea Tea",
-            issues: "4",
-            weight: 4,
-            href: "https://gitea.com/gitea/tea",
-          },
-        },
-        {
-          data: {
-            id: "node-5",
-            label: "edit.fund",
-            issues: "5",
-            weight: 5,
-            href: "https://edit.fund",
-          },
-        },
-        {
-          data: {
-            id: "node-6",
-            label: "Go",
-            issues: "6",
-            weight: 6,
-            href: "https://github.com/golang/go",
-          },
-        },
-      ],
-      edges: [
-        { data: { source: "node-1", target: "node-2", directed: "false" } },
-        { data: { source: "node-1", target: "node-4", directed: "false" } },
-        { data: { source: "node-1", target: "node-5", directed: "false" } },
-        { data: { source: "node-2", target: "node-4", directed: "false" } },
-        { data: { source: "node-2", target: "node-6", directed: "false" } },
-        { data: { source: "node-3", target: "node-4", directed: "false" } },
-        { data: { source: "node-4", target: "node-5", directed: "false" } },
-        { data: { source: "node-5", target: "node-6", directed: "false" } },
-        { data: { source: "node-6", target: "node-3", directed: "false" } },
-      ],
-    },
-  });
-  cy.ready(() => {
-    const bb = cy.bubbleSets();
-    const edges = cy.edges().slice(0, 4);
-    console.log(cy.edges());
-    const nodes = edges.connectedNodes();
-    bb.addPath(nodes, edges, cy.nodes().diff(nodes).left, {
-      drawPotentialArea: true,
-      style: {
-        fill: "rgba(255, 0, 0, 0.2)",
-        stroke: "red",
-      },
-    });
-
-    const bb2 = cy.bubbleSets();
-    const edges2 = cy.$("node#v7").connectedEdges();
-    console.log(cy.edges());
-    const nodes2 = edges2.connectedNodes();
-    bb.addPath(nodes2, edges2, cy.nodes().diff(nodes).left, {
-      drawPotentialArea: true,
-      style: {
-        fill: "rgba(255, 255, 0, 0.2)",
-        stroke: "red",
-      },
-    });
-  });
-  cy.on("tap", "node", async function (evt) {
-    var node = evt.target;
-    console.log("tapped " + node.id());
-    console.log("tapped " + node.data("issues"));
-
-    try {
-      // your browser may block popups
-      window.open(this.data("href"));
-      //window.open(this.data("href") + node.data("issues"));
-    } catch (e) {
-      // fall back on url change
-      window.location.href = this.data("href");
-    }
-  });
-</script>
-
 </html>
